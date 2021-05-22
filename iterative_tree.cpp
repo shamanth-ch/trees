@@ -25,7 +25,7 @@ void traversal(node *root) {
         if(cur == NULL or state == 3) continue;
         
         S.push({cur, state+1});
-        /* changing the  left, data, right to left ,right,data changes to postorder so follows preorder*/
+    
         if (state == 0) S.push({cur->left, 0});
         else if (state == 1) S.push({cur->right, 0});
         else if (state == 2) cout << cur->val << " " ;
